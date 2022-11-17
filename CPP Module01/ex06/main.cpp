@@ -20,7 +20,6 @@ level toEnum(std::string level)
 	if (level == "ERROR")
 		return (ERROR);
 	return (NONSENSE);
-
 }
 
 int main(int argc, char *argv[])
@@ -29,7 +28,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		std::cout << "No level specified\n";
+		std::cout << "No level specified or too many arguments\n";
 		return (1);
 	}
 
@@ -42,14 +41,14 @@ int main(int argc, char *argv[])
 		karen.complain("ERROR");
 		/* fall through */
 	case WARNING:
-			karen.complain("WARNING");
-				/* fall through */
+		karen.complain("WARNING");
+		/* fall through */
 	case INFO:
 		karen.complain("INFO");
 		/* fall through */
 	case DEBUG:
 		karen.complain("DEBUG");
-			/* fall through */
+		break;
 	default:
 		karen.complain(lev);
 		break;
