@@ -1,4 +1,4 @@
-NAME = Brain
+NAME = replaceby
 SRCS = $(wildcard *.cpp)
 OBJS = ${SRCS:.c=.o}
 CC = c++
@@ -11,6 +11,7 @@ ${NAME}: ${OBJS}
 
 clean :
 	@rm -rf *.o
+	@rm -rf $(wildcard *.replace)
 
 fclean : clean
 	@rm -rf ${NAME}
