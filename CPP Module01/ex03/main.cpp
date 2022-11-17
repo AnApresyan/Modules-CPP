@@ -1,9 +1,19 @@
-#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
-	Weapon weapon;
+	Weapon wp_a = Weapon("gun");
+	Weapon wp_b("sword");
+	HumanA humanA("Anahit", wp_a);
+	HumanB humanB("Lusine");
+	humanB.setWeapon(wp_b);
 
-	weapon.setType("gun");
-	std::cout << "Weapon type: " << weapon.getType() << std::endl; 
+	humanA.attack();
+	humanB.attack();
+
+	wp_a.setType("Suringan");
+	humanA.attack();
+	wp_b.setType("Rassengan");
+	humanB.attack();
 }
