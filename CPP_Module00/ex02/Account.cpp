@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/19 10:16:29 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/19 12:14:05 by aapresya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <ctime>
 #include "Account.hpp"
@@ -53,13 +65,14 @@ bool Account::makeWithdrawal(int withdrawal)
 	_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "p_amount:" << this->_amount << ";";
+	std::cout << "withdrawal:";
 	if (this->_amount >= withdrawal)
 	{
 		this->_amount -= withdrawal;
 		this->_nbWithdrawals++;
 		_totalNbWithdrawals++;
 		_totalAmount-=withdrawal;
-		std::cout << "withdrawal:" << withdrawal << ";";
+		std::cout << withdrawal << ";";
 		std::cout << "amount:" << this->_amount << ";";
 		std::cout << "nb_withdrawals:" << this->_nbWithdrawals << std::endl;
 		return (true);
@@ -115,15 +128,15 @@ void	Account::_displayTimestamp()
     if (1 + local_time->tm_mday < 10)
 		std::cout << "0";
 	std::cout <<  local_time->tm_mday << " ";
-	if (1 + local_time->tm_hour < 10)
+	if (local_time->tm_hour < 10)
 		std::cout << "0";
-	std::cout << 1 + local_time->tm_hour;
-	if (1 + local_time->tm_min < 10)
+	std::cout << local_time->tm_hour;
+	if (local_time->tm_min < 10)
 		std::cout << "0";
-    std::cout << 1 + local_time->tm_min;
-	if (1 + local_time->tm_sec < 10)
+    std::cout << local_time->tm_min;
+	if (local_time->tm_sec < 10)
 		std::cout << "0";
-    std::cout << 1 + local_time->tm_sec << "] ";
+    std::cout << local_time->tm_sec << "] ";
 	
 }
 
