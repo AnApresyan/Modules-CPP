@@ -20,22 +20,6 @@ class Fixed
 		int toInt( void ) const;
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-
-		//comparison operators	
-		Fixed &operator>(Fixed const &number);
-		Fixed &operator<(Fixed const &number);
-		Fixed &operator>=(Fixed const &number);
-		Fixed &operator<=(Fixed const &number);
-		Fixed &operator==(Fixed const &number);
-		Fixed &operator!=(Fixed const &number);
-
-		//arithmetic operators
-		Fixed &operator+(Fixed const &number);
-		Fixed &operator-(Fixed const &number);
-		Fixed &operator*(Fixed const &number);
-		Fixed &operator/(Fixed const &number);
-
-
 };
 
 std::ostream &operator<<(std::ostream &o, const Fixed &num);
