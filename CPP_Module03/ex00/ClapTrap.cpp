@@ -20,12 +20,11 @@ ClapTrap::ClapTrap(void)
     this->_attackDamage = 0;
 }
 
-ClapTrap::ClapTrap(std::string const name): _name(name)
+ClapTrap::ClapTrap(std::string const &name)
 {
+    *this = ClapTrap();
+    _name = name;
     std::cout << "Constructor with an argument called\n";
-    this->_hitPoints = 10;
-    this->_energyPoints = 10;
-    this->_attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &other)
@@ -37,6 +36,16 @@ ClapTrap::ClapTrap(ClapTrap const &other)
 ClapTrap::~ClapTrap(void)
 {
     std::cout << "Destructor called\n";
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &other)
+{
+    this->_name = other._name;
+    this->_hitPoints = other._hitPoints;
+    this->_energyPoints = other._energyPoints;
+    this->_attackDamage = other._attackDamage;
+
+    return (*this);
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -71,12 +80,3 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "ClapTrap " << this->_name << " tries to repair himself but doesn't have enough energypoints or hitpoints\n";
 }
 
-
-ClapTrap &ClapTrap::operator=(ClapTrap const &other)
-{
-    this->_hitPoints = other._hitPoints;
-    this->_energyPoints = other._energyPoints;
-    this->_attackDamage = other._attackDamage;
-
-    return (*this);
-}

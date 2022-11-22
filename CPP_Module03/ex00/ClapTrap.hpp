@@ -26,16 +26,14 @@ class ClapTrap
         ClapTrap(void);                                 //canonical form
 
     public:
-        ClapTrap(std::string const name);
+        ClapTrap(std::string const &name);
         ClapTrap(ClapTrap const &other);                //canonical form
         ~ClapTrap(void);                                //canonical form
-        ClapTrap &operator=(ClapTrap const &other); //canonical form
+        ClapTrap &operator=(ClapTrap const &other);     //canonical form
 
         void attack(const std::string &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 };
-
-//std::ostream &operator<<(std::ostream &o, const ClapTrap &clap_trap);
 
 #endif

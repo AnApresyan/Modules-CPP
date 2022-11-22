@@ -1,4 +1,4 @@
-NAME = ScavTrap
+NAME = DiamondTrap
 SRCS = $(wildcard *.cpp)
 OBJS = ${SRCS:.cpp=.o}
 CC = c++

@@ -35,12 +35,12 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-    std::cout << "ClapTrap Copy constructor called\n";
+    std::cout << "ScavTrap Copy constructor called\n";
 }
 
 void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap is now in Gate Keeper mode\n";
+	std::cout << "ScavTrap" << this->_name << " is now in Gate Keeper mode\n";
 }
 
 void ScavTrap::attack(const std::string &target)
