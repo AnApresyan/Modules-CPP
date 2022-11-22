@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 17:51:30 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 18:27:49 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "Dog.hpp"
 
-int main()
+Dog::Dog()
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
-
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
+	std::cout << "Dog no arg constructor called\n";
+	this->type = "Dog";
 }
+
+Dog::Dog(const Dog &other)
+{
+	std::cout << "Dog copy constructor called\n";
+	*this = other;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Dog destructor called\n";
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "woof-woof; ruff!!! ruff!!!\n";
+}
+

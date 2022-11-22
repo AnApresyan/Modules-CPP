@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 19:47:31 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 19:52:40 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
-int main()
+#include "WrongAnimal.hpp"
+
+class WrongCat: public WrongAnimal
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
+	private:
+		public:
+		WrongCat(void);							//Canonocal form	
+		~WrongCat();								//Canonocal form	
+		WrongCat(const WrongCat &other);				//Canonocal form	
+		using WrongAnimal::operator=;			//Canonocal form
+};
 
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
-}
+#endif

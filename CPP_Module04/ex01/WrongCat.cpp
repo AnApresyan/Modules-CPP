@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 19:50:29 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 19:51:08 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "WrongCat.hpp"
 
-int main()
+WrongCat::WrongCat()
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
-
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
+	std::cout << "WrongCat no arg constructor called\n";
+	this->type = "WrongCat";
 }
+
+WrongCat::WrongCat(const WrongCat &other)
+{
+	std::cout << "WrongCat copy constructor called\n";
+	*this = other;
+}
+
+WrongCat::~WrongCat()
+{
+	std::cout << "WrongCat destructor called\n";
+}
+

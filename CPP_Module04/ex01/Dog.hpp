@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 17:39:12 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 20:11:57 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef DOG_H
+# define DOG_H
 
-int main()
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog: public Animal
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
+	private:
+		Brain *brain;
+	public:
+		Dog(void);							//Canonocal form	
+		~Dog();								//Canonocal form	
+		Dog(const Dog &other);				//Canonocal form	
+		using Animal::operator=;			//Canonocal form
+		void makeSound() const;
+};
 
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
-}
+#endif

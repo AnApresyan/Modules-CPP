@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 17:51:30 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 18:27:55 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "Cat.hpp"
 
-int main()
+Cat::Cat()
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
-
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
+	std::cout << "Cat no arg constructor called\n";
+	this->type = "Cat";
 }
+
+Cat::Cat(const Cat &other)
+{
+	std::cout << "Cat copy constructor called\n";
+	*this = other;
+}
+
+Cat::~Cat()
+{
+	std::cout << "Cat destructor called\n";
+}
+
+void Cat::makeSound() const
+{
+	std::cout << "Meeeeeeeeeeeoooooooooowwww\n";
+}
+

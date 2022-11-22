@@ -1,4 +1,4 @@
-NAME = Brain
+NAME = Animals
 SRCS = $(wildcard *.cpp)
 OBJS = ${SRCS:.cpp=.o}
 CC = c++

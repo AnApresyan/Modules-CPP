@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:10 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 20:01:03 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/22 20:10:13 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "Brain.hpp"
 
-int main()
+Brain::Brain()
 {
-    FragTrap him("Monster");
-    
-    for (int i = 0; i < 9; i++)
-        him.attack("Anahit");
+	std::cout << "Brain default constructor called\n";
+}
 
-    him.beRepaired(20);
-    him.attack("Anahit");
-    him.attack("Anahit");
-    him.takeDamage(1000000);
-    him.highFivesGuys();
+Brain &Brain::operator=(const Brain &other)
+{
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = other.ideas[i];
+	return *this;	
+}
+
+Brain::Brain(const Brain &other)
+{
+	std::cout << "Brain copy constructor called\n";
+	*this = other;
+}
+
+Brain::~Brain(void)
+{
+	std::cout << "Brain destructor called\n";
 }
