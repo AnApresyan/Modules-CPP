@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 19:50:29 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 19:51:08 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 19:56:56 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/23 14:33:49 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#ifndef BRAIN_H
+# define BRAIN_H
 
-WrongCat::WrongCat()
+#include <string>
+#include <iostream>
+
+class Brain
 {
-	std::cout << "WrongCat no arg constructor called\n";
-	this->type = "WrongCat";
-}
+	private: 
+		std::string ideas[100];
+	public:
+		Brain(void);
+		~Brain(void);
+		Brain(const Brain &other);
+		Brain &operator=(const Brain &other);
+};
 
-WrongCat::WrongCat(const WrongCat &other)
-{
-	std::cout << "WrongCat copy constructor called\n";
-	*this = other;
-}
-
-WrongCat::~WrongCat()
-{
-	std::cout << "WrongCat destructor called\n";
-}
-
+#endif

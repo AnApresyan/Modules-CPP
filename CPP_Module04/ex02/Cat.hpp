@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 20:01:03 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:51:37 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 17:39:12 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/23 15:11:43 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_H
+# define CAT_H
+
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-Brain::Brain()
+class Cat: public AAnimal
 {
-	std::cout << "Brain default constructor called\n";
-}
+	private:
+		Brain *_brain;
+	public:
+		Cat(void);							//Canonocal form	
+		~Cat();								//Canonocal form	
+		Cat(const Cat &other);				//Canonocal form	
+		Cat &operator=(const Cat &other);
+		void makeSound() const;
+};
 
-Brain &Brain::operator=(const Brain &other)
-{
-	for (int i = 0; i < 100; i++)
-		this->ideas[i] = other.ideas[i];
-	return *this;	
-}
-
-Brain::Brain(const Brain &other)
-{
-	std::cout << "Brain copy constructor called\n";
-	*this = other;
-}
-
-Brain::~Brain(void)
-{
-	std::cout << "Brain destructor called\n";
-}
+#endif

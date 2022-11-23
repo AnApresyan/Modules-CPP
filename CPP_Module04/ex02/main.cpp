@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 20:01:03 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:51:37 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 18:09:52 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/23 15:13:06 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-Brain::Brain()
+int main()
 {
-	std::cout << "Brain default constructor called\n";
-}
+	const AAnimal *j = new Dog();
+	const AAnimal *i = new Cat();
+	
+	Cat kotik;
+	Dog tuzik;
 
-Brain &Brain::operator=(const Brain &other)
-{
-	for (int i = 0; i < 100; i++)
-		this->ideas[i] = other.ideas[i];
-	return *this;	
-}
+	kotik.makeSound();
+	tuzik.makeSound();
 
-Brain::Brain(const Brain &other)
-{
-	std::cout << "Brain copy constructor called\n";
-	*this = other;
-}
+	AAnimal *cat = new Dog();
+	AAnimal *dog = new Cat();
 
-Brain::~Brain(void)
-{
-	std::cout << "Brain destructor called\n";
+	//kotik = tuzik;  		//should not work
+	*cat = *dog;
+	delete j; // should not create a leak
+	delete i;
+	return 0;
 }

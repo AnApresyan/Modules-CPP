@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 19:47:31 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 19:52:40 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/22 17:39:12 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/23 15:11:40 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_H
-# define WRONGCAT_H
+#ifndef DOG_H
+# define DOG_H
 
-#include "WrongAnimal.hpp"
+#include "AAnimal.hpp"
+#include "Brain.hpp"
 
-class WrongCat: public WrongAnimal
+class Dog: public AAnimal
 {
 	private:
-		public:
-		WrongCat(void);							//Canonocal form	
-		~WrongCat();								//Canonocal form	
-		WrongCat(const WrongCat &other);				//Canonocal form	
-		using WrongAnimal::operator=;			//Canonocal form
+		Brain *_brain;
+	public:
+		Dog(void);							//Canonocal form	
+		~Dog();								//Canonocal form	
+		Dog(const Dog &other);				//Canonocal form	
+		Dog &operator=(const Dog &other);	//Canonocal form
+		void makeSound() const;
 };
 
 #endif
