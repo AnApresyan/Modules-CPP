@@ -6,14 +6,17 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 18:59:49 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 20:24:04 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 10:56:14 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_H
 # define FORM_H
 
-#include "Bureaucrat.hpp"
+#include <iostream>
+#include <string>
+
+class Bureaucrat;
 
 class Form
 {
@@ -54,4 +57,5 @@ class Form
 
 std::ostream &operator<<(std::ostream &o, const Form &f);
 
+#include "Bureaucrat.hpp"
 #endif

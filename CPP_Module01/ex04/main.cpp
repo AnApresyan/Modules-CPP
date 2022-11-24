@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:04:43 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/19 11:04:44 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:08:17 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void replace_text(std::ifstream &infile, std::string &str1, std::string &str2, s
 		if (!infile.eof())
 			text += '\n';
 	}
-	//return (text);
 }
 
 int main(int args, char *argv[])
@@ -49,10 +48,15 @@ int main(int args, char *argv[])
 	std::string str1 = argv[2];
 	std::string str2 = argv[3];
 	infile.open(filename);
-	outfile.open(filename + ".replace");
-	if (!infile.is_open() || !outfile.is_open())
+	if (!infile.is_open())
 	{
-		std::cout << "Something wrong with the input/output file" << std::endl;
+		std::cout << "Something wrong with the input file" << std::endl;
+		return (1);
+	}
+	outfile.open(filename + ".replace");
+	if (!outfile.is_open())
+	{
+		std::cout << "Something wrong with the output file" << std::endl;
 		return (1);
 	}
 	replace_text(infile, str1, str2, text);

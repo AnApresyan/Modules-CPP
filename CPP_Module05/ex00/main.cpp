@@ -5,19 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 11:03:25 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/24 15:23:45 by aapresya         ###   ########.fr       */
+/*   Created: 2022/11/23 18:37:21 by aapresya          #+#    #+#             */
+/*   Updated: 2022/11/23 18:57:53 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie* zombieHorde(int N, std::string name);
+#include "Bureaucrat.hpp"
 
 int main()
 {
-	Zombie *zombies = zombieHorde(10, "Anyutchka");
-	for (int i = 0; i < 10; i++)
-		zombies[i].announce();
-	delete [] zombies;
+	Bureaucrat *b1 = new Bureaucrat("Pedro Garcia", 1);
+	Bureaucrat *b2 = new Bureaucrat("Lu You", 150);
+	try
+	{
+		Bureaucrat *fakeb = new Bureaucrat("Anahit Apresyan", 0);		//higher grade than the others:D
+	}
+	catch(std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		b2->increment();
+		b1->decrement();
+		b1->increment();
+		b1->increment();
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	
+	std::cout << *b1 << std::endl;
+	std::cout << *b2 << std::endl;
 }

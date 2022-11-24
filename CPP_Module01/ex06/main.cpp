@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:05:18 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/19 11:05:19 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:21:50 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,21 +49,21 @@ int main(int argc, char *argv[])
 
 	switch (lv)
 	{
-	case ERROR:
-		karen.complain("ERROR");
-		/* fall through */
-	case WARNING:
-		karen.complain("WARNING");
-		/* fall through */
-	case INFO:
-		karen.complain("INFO");
-		/* fall through */
-	case DEBUG:
-		karen.complain("DEBUG");
-		break;
-	default:
-		karen.complain(lev);
-		break;
+		case DEBUG:
+			karen.complain("DEBUG");
+			/* fall through */
+		case INFO:
+			karen.complain("INFO");
+			/* fall through */
+		case WARNING:
+			karen.complain("WARNING");
+			/* fall through */
+		case ERROR:
+			karen.complain("ERROR");
+			break;
+		default:
+			karen.complain(lev);
+			break;
 	}
 	return (0);
 }
