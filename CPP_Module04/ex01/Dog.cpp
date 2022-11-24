@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:51:30 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:30:34 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 19:22:37 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog()
 	this->type = "Dog";
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other): _brain(new Brain())
 {
 	std::cout << "Dog copy constructor called\n";
 	*this = other;
@@ -39,6 +39,6 @@ void Dog::makeSound() const
 Dog &Dog::operator=(const Dog &other)
 {
 	this->type = other.getType();
-	this->_brain = other._brain;
+	*this->_brain = *other._brain;
 	return *this;
 }

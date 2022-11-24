@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:09:52 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:14:21 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:17:16 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,19 @@ int main()
 	meta->makeSound();
 
 	const WrongAnimal *wrong = new WrongCat();
-	std::cout << wrong->getType() << " " << std::endl;
+	std::cout << "Type: " << wrong->getType() << " " << std::endl;
 	wrong->makeSound();
 
-	// Cat *katyonok = new Cat();
-	// Dog *bob = new Dog();
-	// Dog *Marley = new Dog();
+	const WrongCat *wrongCat = new WrongCat();
+	std::cout << "Type: " << wrongCat->getType() << " " << std::endl;
+	wrongCat->makeSound();
+	
+	//Cat *katyonok = new Cat();
+	Dog *bob = new Dog();
+	//Dog *Marley = new Dog();
 
-	// *bob = *katyonok;
-	// std::cout << "\n\n\nBob type: " << bob->getType() << ", Bob makes sound: " << std::endl;
-	// bob->makeSound();
-	// std::cout << std::endl << std::endl << std::endl;
-	//katynonok = bob;
+	std::cout << "\n\n\nBob type: " << bob->getType() << ", Bob makes sound: " << std::endl;
+	bob->makeSound();
+	std::cout << std::endl << std::endl << std::endl;
 	
 }

@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 19:43:54 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 19:44:43 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:14:14 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal
 		WrongAnimal(const WrongAnimal &other);				//Canonical form
 		WrongAnimal &operator=(const WrongAnimal &other);		//Canonical form
 		const std::string &getType() const;
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

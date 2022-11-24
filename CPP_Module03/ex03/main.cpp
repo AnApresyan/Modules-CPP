@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:51:10 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/20 19:29:21 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 17:51:48 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int main()
     him.attack("Anahit");
     him.takeDamage(15);
     him.highFivesGuys();
+    him.whoAmI();
 }

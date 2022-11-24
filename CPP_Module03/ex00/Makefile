@@ -2,12 +2,12 @@ NAME = ClapTrap
 SRCS = $(wildcard *.cpp)
 OBJS = ${SRCS:.cpp=.o}
 CC = c++
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	@${CC} ${OBJS} ${CFLAGS} -o ${NAME}
+	@${CC} ${OBJS} ${CXXLAGS} -o ${NAME}
 
 clean :
 	@rm -rf *.o

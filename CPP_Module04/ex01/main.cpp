@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:09:52 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:47:52 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 19:25:35 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ int main()
 {
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();
+
+	Cat b;
+	Dog c;
 	
-	Cat kotik;
-	Dog tuzik;
+	Cat kotik(b);
+	Dog tuzik(c);
 
 	kotik.makeSound();
 	tuzik.makeSound();

@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 19:50:29 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 19:51:08 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:16:31 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,7 @@ WrongCat::~WrongCat()
 	std::cout << "WrongCat destructor called\n";
 }
 
+void WrongCat::makeSound(void) const
+{
+	std::cout << "Wrong Cat sounds\n";
+}

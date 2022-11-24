@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 19:47:31 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/22 19:52:40 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:14:08 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class WrongCat: public WrongAnimal
 		~WrongCat();								//Canonocal form	
 		WrongCat(const WrongCat &other);				//Canonocal form	
 		using WrongAnimal::operator=;			//Canonocal form
+		void makeSound(void) const;
 };
 
 #endif

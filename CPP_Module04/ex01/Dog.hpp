@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:39:12 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:19:10 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:24:58 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog: public Animal
 		Brain *_brain;
 	public:
 		Dog(void);							//Canonocal form	
-		~Dog();								//Canonocal form	
+		virtual ~Dog();								//Canonocal form	
 		Dog(const Dog &other);				//Canonocal form	
 		Dog &operator=(const Dog &other);	//Canonocal form
 		void makeSound() const;

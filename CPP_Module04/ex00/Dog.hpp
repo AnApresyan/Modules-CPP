@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:39:12 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 14:07:44 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:39:56 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog: public Animal
 		~Dog();								//Canonocal form	
 		Dog(const Dog &other);				//Canonocal form	
 		Dog &operator=(const Dog &other);	//Canonical form
-		void makeSound() const;
+		virtual void makeSound() const;
 };
 
 #endif
