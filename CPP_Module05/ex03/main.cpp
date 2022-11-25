@@ -6,39 +6,18 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 18:37:21 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/25 11:36:49 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/25 13:53:27 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 
 int main()
 {
-	Bureaucrat *b1 = new Bureaucrat("Pedro Garcia", 1);
-	Bureaucrat *b2 = new Bureaucrat("Lu You", 150);
-	try
-	{
-		Bureaucrat *fakeb = new Bureaucrat("Anahit Apresyan", 0);		//higher grade than the others:D
-		fakeb->increment();
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	try
-	{
-		b2->increment();
-		b1->decrement();
-		b1->increment();
-		b1->increment();
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
-	std::cout << *b1 << std::endl;
-	std::cout << *b2 << std::endl;
-	delete b2;
-	delete b1;
+	Intern someRandomIntern;
+	Form* rrf;
+	Form *bla;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	bla = someRandomIntern.makeForm(" zgb", "hmm");
 }

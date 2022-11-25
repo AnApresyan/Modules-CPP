@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:20:55 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/23 19:16:49 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:01:12 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,5 @@ class Bureaucrat
 };
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &b);
-
 
 #endif

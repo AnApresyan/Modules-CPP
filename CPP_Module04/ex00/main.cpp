@@ -6,7 +6,7 @@
 /*   By: aapresya <anahit.apresyan7@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:09:52 by aapresya          #+#    #+#             */
-/*   Updated: 2022/11/24 18:17:16 by aapresya         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:33:49 by aapresya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,4 @@ int main()
 	std::cout << "\n\n\nBob type: " << bob->getType() << ", Bob makes sound: " << std::endl;
 	bob->makeSound();
 	std::cout << std::endl << std::endl << std::endl;
-	
 }

@@ -1,4 +1,4 @@
-NAME = Form
+NAME = Intern
 SRCS = $(wildcard *.cpp)
 OBJS = ${SRCS:.cpp=.o}
 CC = c++
