@@ -8,8 +8,7 @@
 Base *generate(void)
 {
     int i;
-    srand(time(NULL));
-    i = rand() % 2;
+    i = rand() % 3;
 
     if (i == 0)
         return new A();
