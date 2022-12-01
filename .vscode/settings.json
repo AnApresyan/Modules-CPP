@@ -54,6 +54,8 @@
 		"deque": "cpp",
 		"fstream": "cpp",
 		"iomanip": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"list": "cpp",
+		"vector": "cpp"
 	}
 }
